@@ -5,7 +5,8 @@
             <div class="col-md-12">
                 <h1>Contact Me</h1>
                 <hr>
-                <form>
+                <form action="{{ url('contact') }}" method="POST">
+                {{ csrf_token() }}
                     <div class="form-group">
                         <label for="email" name="email">Email:</label>
                         <input type="text" id="email" name="email" class="form-control">
