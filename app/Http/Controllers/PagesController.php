@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Mail;
 use App\Post;
+use Session;
 
 class PagesController extends Controller
 {
@@ -52,5 +54,8 @@ class PagesController extends Controller
             $message->to('info.ogogo@gmail.com');
             $message->subject($data['subject']);            
         });
+
+        Session::flash('success', 'Your Email was Sent!');
+        return redirect()->route('home');
     }
 }

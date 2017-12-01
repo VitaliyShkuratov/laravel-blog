@@ -6,7 +6,7 @@
                 <h1>Contact Me</h1>
                 <hr>
                 <form action="{{ url('contact') }}" method="POST">
-                {{ csrf_token() }}
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="email" name="email">Email:</label>
                         <input type="text" id="email" name="email" class="form-control">

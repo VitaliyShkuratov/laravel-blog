@@ -3,6 +3,15 @@
 
 @section('stylesheets')
     {!! Html::style('css/parsley.css') !!}
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: "link",
+            toolbar: 'undo redo | cut copy paste'
+        });
+    </script>
 @endsection
 
 @section('content')
