@@ -8,10 +8,11 @@
     <script>
         tinymce.init({
             selector: 'textarea',
-            plugins: "link",
-            toolbar: 'undo redo | cut copy paste'
+            plugins: 'link code',
+            menubar: false
         });
     </script>
+
 @endsection
 
 @section('content')
@@ -44,7 +45,7 @@
 
                 {{ Form::label('body', 'Post Body:') }}
                 {{ Form::textarea('body', null, 
-                    ['class' => 'form-control', 'required' => '']) }}
+                    ['class' => 'form-control']) }}
 
                 {{ Form::submit('Create Post', 
                     array(  'class' => 'btn btn-success btn-lg btn-block', 

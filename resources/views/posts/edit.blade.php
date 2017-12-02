@@ -2,6 +2,19 @@
 
 @section('title', '| Edit Blog Post')
 
+@section('stylesheets')
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'link code',
+            menubar: false
+        });
+    </script>
+    
+@endsection
+
 @section('content')
 
     <div class="row">
